@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Righteous&display=swap");
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "EB Garamond", serif;
+}
+
+/* Variables */
+:root {
+  --PADDING: 1.5vw;
+  --SHADOW: 3px 3px 0 3px rgba(0, 0, 0, 0.54);
+  --SHADOW-W: 3px 3px 0 3px rgba(91, 87, 87, 0.54);
+  --RADIUS: 20px;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("img/images.jpeg");
+  background-repeat: repeat;
+  gap: 3vw;
+}
+
+header {
+  width: clamp(150px, 50%, 700px);
+  height: auto;
+  background-color: white;
+  padding: var(--PADDING);
+  border-radius: var(--RADIUS);
+  box-shadow: var(--SHADOW);
+  margin-top: 3vw;
+  margin-bottom: 1vw;
+}
+
+span {
+  white-space: nowrap;
+}
+
+h1 {
+  font-size: 4vw;
+  text-align: center;
+}
+
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.to-do-list {
+  background-color: transparent;
+  padding: 1vw;
+  border-radius: var(--RADIUS);
+  color: white;
+  font-size: clamp(1rem, 3vw, 1.1rem);
+  text-align: center;
+}
+
+.add__input {
+  font-size: clamp(5px, 3vw, 2rem);
+  border-radius: var(--RADIUS);
+  padding: 0.5vw;
+  border: 2px solid black;
+}
+
+.add__insert {
+  width: 10vw;
+  background-color: white;
+  font-size: clamp(5px, 3vw, 2rem);
+  padding: 0.5vw;
+  color: rgb(39, 147, 39);
+  border: 2px solid rgb(39, 147, 39);
+  border-radius: var(--RADIUS);
+}
+
+.add__insert:hover {
+  color: white;
+  background-color: rgb(39, 147, 39);
+}
+
+.list {
+  max-width: 90vw;
+  list-style-type: none;
+  font-size: clamp(5px, 3vw, 2rem);
+}
+
+.task {
+  margin: 1.5rem;
+  text-align: left;
+  background-color: white;
+  color: black;
+  padding: 0.5rem;
+  border-radius: 10px;
+  box-shadow: var(--SHADOW);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.b {
+  font-size: 1rem;
+  padding: 0.5rem;
+  background-color: transparent;
+  border-radius: 5px;
+}
+
+.trash {
+  color: red;
+  border: 2px solid red;
+}
+
+.trash:hover {
+  color: white;
+  background: red;
+}
+
+.done {
+  color: rgb(158, 158, 26);
+  border: 2px solid rgb(158, 158, 26);
+}
+
+.done:hover {
+  background-color: rgb(158, 158, 26);
+  color: white;
+}
+
+.task p {
+  margin: 0.5rem;
+  word-wrap: break-word;
+  word-break: break-word;
+  flex: 1;
+}
+
+.underline {
+  text-decoration: line-through;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5vw;
+}
